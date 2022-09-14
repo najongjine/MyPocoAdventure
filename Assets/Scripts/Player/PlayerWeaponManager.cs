@@ -22,7 +22,7 @@ public class PlayerWeaponManager : MonoBehaviour
 
     private Quaternion bulletRotation;
 
-    //private CameraShake cameraShake;
+    private CameraShake cameraShake;
 
     [SerializeField]
     private float cameraShakeCooldown = 0.2f;
@@ -34,7 +34,7 @@ public class PlayerWeaponManager : MonoBehaviour
 
         mainCam = Camera.main;
 
-        //cameraShake = mainCam.GetComponent<CameraShake>();
+        cameraShake = mainCam.GetComponent<CameraShake>();
     }
 
     private void Update()
@@ -78,19 +78,17 @@ public class PlayerWeaponManager : MonoBehaviour
         bulletRotation = Quaternion.Euler(0, 0,
             Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg);
 
-        /*
         BulletPool.instance.FireBullet(weaponIndex, spawnPos,
             bulletRotation, direction);
 
         cameraShake.ShakeCamera(cameraShakeCooldown);
-        */
-
+        /*
         GameObject newBullet = Instantiate(weaponBullets[weaponIndex],
             spawnPos, bulletRotation);
 
         newBullet.GetComponent<Bullet>().MoveInDirection(direction);
-
-        playerWeapons[weaponIndex].PlayShootSound();
+        */
+        //playerWeapons[weaponIndex].PlayShootSound();
 
     }
 }

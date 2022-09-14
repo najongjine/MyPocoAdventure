@@ -38,7 +38,7 @@ public class PlayerShootingManager : MonoBehaviour
 
                 shootingTimer = Time.time + shootingTimerLimit;
                 // animate muzzle flash
-                //shootingAnimation.SetTrigger(TagManager.SHOOT_ANIMATION_PARAMETER);
+                shootingAnimation.SetTrigger(TagManager.SHOOT_ANIMATION_PARAMETER);
 
                 playerWeaponManager.Shoot(bulletSpawnPos.position);
 

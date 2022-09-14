@@ -26,6 +26,7 @@ public class Bullet : MonoBehaviour
 
     private Sprite bulletSprite;
 
+
     private void Awake()
     {
         myBody = GetComponent<Rigidbody2D>();

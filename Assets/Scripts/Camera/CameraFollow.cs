@@ -36,7 +36,6 @@ public class CameraFollow : MonoBehaviour
                 deltaPos.x = delta_X + bound_X;
 
         }
-        Debug.Log($"##  deltaPos.x: {deltaPos.x}");
 
         delta_Y = playerTarget.position.y - transform.position.y;
 
