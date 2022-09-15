@@ -54,20 +54,16 @@ public class Enemy : CharacterMovement
         lastFollowTime = Time.time;
         turningTimeDelay = ((float)1f - (float)xSpeed);
         turningTimeDelay += 1f * turningDelayRate;
-        /*
         enemyHealth = GetComponent<CharacterHealth>();
 
         enemyBatch = GetComponentInParent<EnemyBatchHandler>();
-        */
 
     }
 
     private void OnDisable()
     {
-        /*
         if (!enemyHealth.IsAlive())
             enemyBatch.RemoveEnemy(this);
-        */
     }
 
     private void Update()
@@ -75,26 +71,22 @@ public class Enemy : CharacterMovement
 
         if (!playerTarget)
             return;
-        /*
         if (!enemyHealth.IsAlive())
             return;
-        */
         HandleFacingDirection();
     }
 
     private void FixedUpdate()
     {
-        /*
         if (!enemyHealth.IsAlive())
             return;
-        */
         HandleChasingPlayer();
     }
 
     void HandleChasingPlayer()
     {
         // replace HasPlayerTarget_TEST with HasPlayerTarget
-        if (HasPlayerTarget_TEST)
+        if (HasPlayerTarget)
         {
 
             if (!dealthDamageToPlayer)
@@ -103,11 +95,12 @@ public class Enemy : CharacterMovement
             }
             else
             {
-
+                // dealth damage to player
                 if (Time.time < damageCooldownTimer)
                 {
                     enemyMovementMotion = startingPosition - transform.position;
                 }
+                // reset dealt damage cooltime
                 else
                 {
                     dealthDamageToPlayer = false;
@@ -134,7 +127,7 @@ public class Enemy : CharacterMovement
 
     void ChasePlayer()
     {
-
+        // 플레이어 위치 새로 텀색하기. turningTimeDelay := 플레이어 위치 새로 검색 쿨타임
         if (Time.time - lastFollowTime > turningTimeDelay)
         {
             playerLastTrackedPosition = playerTarget.position;
@@ -193,7 +186,7 @@ public class Enemy : CharacterMovement
 
             dealthDamageToPlayer = true;
 
-            //collision.GetComponent<CharacterHealth>().TakeDamage(damageAmount);
+            collision.GetComponent<CharacterHealth>().TakeDamage(damageAmount);
         }
 
     }

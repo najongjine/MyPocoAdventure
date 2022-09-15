@@ -15,7 +15,9 @@ GameObject:
   - component: {fileID: 1833246088854497033}
   - component: {fileID: 1833246088854497034}
   - component: {fileID: 4707506111769231758}
-  m_Layer: 0
+  - component: {fileID: 1833246088050540655}
+  - component: {fileID: 1833246088050540663}
+  m_Layer: 7
   m_Name: masked_Orc
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -191,3 +193,29 @@ MonoBehaviour:
   damageAmount: 10
   chaseSpeed: 0.8
   turningDelayRate: 1
+--- !u!114 &1833246088050540655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833246088854497036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d457eed1d83190a4db484a747990e4dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1833246088050540663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833246088854497036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d0a2e1e22f77414fbcd5f80844253b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  health: 0

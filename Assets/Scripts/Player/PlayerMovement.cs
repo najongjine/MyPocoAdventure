@@ -17,9 +17,7 @@ public class PlayerMovement : CharacterMovement
 
     
     private PlayerWeaponManager playerWeaponManager;
-    /*
     private CharacterHealth playerHealth;
-    */
 
     protected override void Awake()
     {
@@ -35,14 +33,14 @@ public class PlayerMovement : CharacterMovement
 
     private void Start()
     {
-        //playerHealth = GetComponent<CharacterHealth>();
+        playerHealth = GetComponent<CharacterHealth>();
     }
 
     private void FixedUpdate()
     {
 
-        //if (!playerHealth.IsAlive())
-           // return;
+        if (!playerHealth.IsAlive())
+            return;
 
         moveX = Input.GetAxisRaw(TagManager.HORIZONTAL_AXIS);
         moveY = Input.GetAxisRaw(TagManager.VERTICAL_AXIS);

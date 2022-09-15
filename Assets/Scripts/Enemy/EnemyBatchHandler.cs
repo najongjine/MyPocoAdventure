@@ -26,6 +26,7 @@ public class EnemyBatchHandler : MonoBehaviour
 
         foreach (Transform tr in GetComponentInChildren<Transform>())
         {
+            // make sure it's child transform
             if (tr != this)
                 enemies.Add(tr.GetComponent<CharacterMovement>());
         }
