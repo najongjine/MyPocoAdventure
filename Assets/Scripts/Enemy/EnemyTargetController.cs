@@ -16,10 +16,9 @@ public class EnemyTargetController : MonoBehaviour
     [SerializeField]
     private EnemyBatchHandler enemyBatch;
 
-    /*
     [SerializeField]
     private BossMovement bossEnemy;
-    */
+
     [SerializeField]
     private bool bossZoneDetection;
 
@@ -28,7 +27,6 @@ public class EnemyTargetController : MonoBehaviour
 
         if (bossZoneDetection)
         {
-            /*
             if (collision.CompareTag(TagManager.PLAYER_TAG))
             {
 
@@ -44,7 +42,6 @@ public class EnemyTargetController : MonoBehaviour
                 }
 
             }
-            */
         }
         else
         {
