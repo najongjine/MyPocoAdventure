@@ -85,10 +85,8 @@ public class EnemyShooter : MonoBehaviour
 
     private void OnDisable()
     {
-        /*
         if (!enemyHealth.IsAlive())
             enemyBatch.RemoveShooterEnemy(this);
-        */
     }
 
     private void Update()

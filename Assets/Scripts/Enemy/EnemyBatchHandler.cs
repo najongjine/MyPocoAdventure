@@ -13,10 +13,8 @@ public class EnemyBatchHandler : MonoBehaviour
     [SerializeField]
     private Transform shooterEnemyHolder;
 
-    /*
     [SerializeField]
     private List<EnemyShooter> shooterEnemies;
-    */
 
     [SerializeField]
     private GameObject batchDoor;
@@ -31,7 +29,6 @@ public class EnemyBatchHandler : MonoBehaviour
                 enemies.Add(tr.GetComponent<CharacterMovement>());
         }
 
-        /*
         if (hasShooterEnemies)
         {
             foreach (Transform tr in shooterEnemyHolder.GetComponentInChildren<Transform>())
@@ -39,7 +36,6 @@ public class EnemyBatchHandler : MonoBehaviour
                 shooterEnemies.Add(tr.GetComponent<EnemyShooter>());
             }
         }
-        */
 
     }
 
@@ -62,7 +58,6 @@ public class EnemyBatchHandler : MonoBehaviour
         CheckToUnlockDoor();
 
     }
-    /*
     public void RemoveShooterEnemy(EnemyShooter shooterEnemy)
     {
 
@@ -72,10 +67,8 @@ public class EnemyBatchHandler : MonoBehaviour
         CheckToUnlockDoor();
 
     }
-    */
     void CheckToUnlockDoor()
     {
-        /*
         if (hasShooterEnemies)
         {
             if (enemies.Count == 0 && shooterEnemies.Count == 0)
@@ -92,7 +85,6 @@ public class EnemyBatchHandler : MonoBehaviour
                     batchDoor.SetActive(false);
             }
         }
-        */
     }
 
 }
